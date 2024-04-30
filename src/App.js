@@ -6,8 +6,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/movie/:id" element={<Detail />}></Route>
-        <Route exact path="/" element={<Home />}></Route>
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/movie/:id`}
+          element={<Detail />}
+        ></Route>
+        <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/`}
+          element={<Home />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
